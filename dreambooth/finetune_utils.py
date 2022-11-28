@@ -63,8 +63,8 @@ class FilenameTextGetter:
         tags = filename_text.split(',')
         # if shared.opts.tag_drop_out != 0:
         #     tags = [t for t in tags if random.random() > shared.opts.tag_drop_out]
-        if shared.opts.shuffle_tags:
-            random.shuffle(tags)
+        # if shared.opts.shuffle_tags:
+        #   random.shuffle(tags)
         output = text_template.replace("[filewords]", ','.join(tags))
         return output
 
